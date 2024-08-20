@@ -6,75 +6,79 @@
     <title>Form</title>
 </head>
 <body>
-    <section>
-        <div>
-            <label for="">First Name: </label> <br>
-            <input type="text" name="text" id="" placeholder="Enter First Name Here">
-        </div>
-        <div>
-            <label for="">Last Name: </label><br>
-            <input type="text" name="text" id="" placeholder="Enter Last Name Here">
-        </div>
-        <div>
-            <label for="">Password: </label><br>
-            <input type="password" name="password" id="" placeholder="Enter your password here">
-        </div>
-        <div>
-            <label for="">Number: </label><br>
-            <input type="number" name="number" id="" placeholder="Enter Number Here" min="1" max="100">
-        </div>
-
-        <div>
-            <label for="games">Favorite Games: </label>
-            <select name="games" id="games">
-                <optgroup label="Outdoor games">
-                    <option value="football">Football</option>
-                    <option value="cricket">Cricket</option>
-                    <option value="basketball">Basketball</option>
-                </optgroup>
-                <optgroup label="Indoor games">
-                    <option value="football">Football</option>
-                    <option value="cricket">Cricket</option>
-                    <option value="basketball">Basketball</option>
-                </optgroup>
-            </select>
-        </div>
-
-        <div>
-            <label for="baverage">Favorite Beverage: </label>
-            <input type="text" name="beverage" id="baverage" list="beverage-list">
-            <datalist id="beverage-list">
-                    <option value="football"></option>
-                    <option value="cricket"></option>
-                    <option value="basketball"></option>
-                    <option value="table tenis"></option>
-                    <option value="hand ball"></option>
-                    <option value="kabadi"></option>
-            </datalist>
-        </div>
-
-    </section>
-
-    <section>
-        <fieldset>
-            <legend>What is your favorite programming language?</legend>
+    <form action="/submit" method="post">
+        <section>
             <div>
-                <input type="radio" name="program" id="python">
-                <label for="python">Python</label>
+                <label for="firstName">First Name: </label> <br>
+                <input type="text" name="firstName" id="firstName" placeholder="Enter First Name Here">
             </div>
             <div>
-                <input type="radio" name="program" id="java">
-                <label for="java">Java</label>
+                <label for="lastName">Last Name: </label><br>
+                <input type="text" name="lastName" id="lastName" placeholder="Enter Last Name Here">
             </div>
             <div>
-                <input type="radio" name="program" id="js">
-                <label for="js">JavaScript</label>
+                <label for="password">Password: </label><br>
+                <input type="password" name="password" id="password" placeholder="Enter your password here">
             </div>
             <div>
-                <input type="radio" name="program" id="php">
-                <label for="php">Php</label>
+                <label for="number">Number: </label><br>
+                <input type="number" name="number" id="number" placeholder="Enter Number Here" min="1" max="100">
             </div>
-        </fieldset>
-    </section>
+
+            <div>
+                <label for="games">Favorite Games: </label>
+                <select name="games" id="games">
+                    <optgroup label="Outdoor games">
+                        <option value="football">Football</option>
+                        <option value="cricket">Cricket</option>
+                        <option value="basketball">Basketball</option>
+                    </optgroup>
+                    <optgroup label="Indoor games">
+                        <option value="football">Football</option>
+                        <option value="cricket">Cricket</option>
+                        <option value="basketball">Basketball</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <div>
+                <label for="beverage">Favorite Beverage: </label>
+                <input type="text" name="beverage" id="beverage" list="beverage-list">
+                <datalist id="beverage-list">
+                    <option value="Coffee"></option>
+                    <option value="Tea"></option>
+                    <option value="Juice"></option>
+                    <option value="Soda"></option>
+                    <option value="Water"></option>
+                </datalist>
+            </div>
+        </section>
+
+        <section>
+            <fieldset>
+                <legend>What is your favorite programming language?</legend>
+                <div>
+                    <input type="radio" name="program" id="python" value="Python">
+                    <label for="python">Python</label>
+                </div>
+                <div>
+                    <input type="radio" name="program" id="java" value="Java">
+                    <label for="java">Java</label>
+                </div>
+                <div>
+                    <input type="radio" name="program" id="js" value="JavaScript">
+                    <label for="js">JavaScript</label>
+                </div>
+                <div>
+                    <input type="radio" name="program" id="php" value="PHP">
+                    <label for="php">PHP</label>
+                </div>
+            </fieldset>
+        </section>
+
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
 </body>
 </html>
